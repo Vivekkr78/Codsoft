@@ -1,0 +1,70 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+class simplecalc {
+    protected:
+    int a,b;
+    char c;
+    public  :
+    int plus();    
+    int minus();
+    int multi();
+    int divide();
+
+    void result();    
+};
+
+int simplecalc :: plus(){
+        return(a+b);
+}
+
+int simplecalc :: minus(){
+        return(a-b);
+}
+
+int simplecalc :: multi(){
+        return(a*b);
+}
+
+int simplecalc :: divide(){
+        return(a/b);
+}
+
+void simplecalc :: result(){
+    cout<<"Enter your two numbers "<<endl;
+    cin>>a>>b;
+    cout<<"Enter your choice "<<endl;
+    cin>>c;
+
+    if (c == '+')
+    {
+        cout<<plus()<<endl;
+    }
+    else if (c == '-')
+    {
+        cout<<minus()<<endl;
+    }
+    else if (c == '*')
+    {
+        cout<<multi()<<endl;
+    }
+    else if (c == '/')
+    {
+        cout<<divide()<<endl;
+    }
+    else
+    {
+        cout<<"wrong choice"<<" try again"<<endl;
+    }
+    
+}
+
+int main(){
+
+    simplecalc s;
+    s.result();
+    cout<<"THANK YOU FOR USING !!"<<endl;
+    
+    return 0;
+    }
